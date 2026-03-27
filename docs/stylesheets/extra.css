@@ -1,0 +1,187 @@
+/* ===== 基本設定 ===== */
+:root {
+  --md-text-font-size: 0.85rem;
+}
+
+.md-typeset {
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* 見出し */
+.md-typeset h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* テーブル */
+.md-typeset table {
+  font-size: 0.8rem;
+}
+
+.md-typeset table th,
+.md-typeset table td {
+  padding: 0.5rem 0.6rem;
+}
+
+/* admonition */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.85rem;
+}
+
+/* コンテンツ幅 */
+.md-content {
+  max-width: 960px;
+}
+
+/* ===== フォルダ構成風サイドバー ===== */
+
+.md-nav {
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+/* フォルダラベル */
+.md-nav__item--nested > .md-nav__link {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.md-nav__item--nested > .md-nav__link::before {
+  content: "📁 ";
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 0.85em;
+  margin-right: 1px;
+}
+
+.md-nav__item--active > .md-nav__link::before {
+  content: "📂 ";
+}
+
+/* ファイルアイコン */
+.md-nav__item:not(.md-nav__item--nested) > .md-nav__link::before {
+  content: "📄 ";
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  font-size: 0.8em;
+  margin-right: 1px;
+  opacity: 0.7;
+}
+
+/* ツリーガイドライン */
+.md-nav__item--nested > .md-nav {
+  border-left: 1px solid rgba(0,0,0,0.1);
+  margin-left: 6px;
+  padding-left: 6px;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--nested > .md-nav {
+  border-left-color: rgba(255,255,255,0.15);
+}
+
+/* リンク */
+.md-nav__link {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 3px;
+  transition: background 0.15s ease;
+}
+
+.md-nav__link:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.md-nav__link--active {
+  background: rgba(103, 58, 183, 0.08) !important;
+  font-weight: 600;
+}
+
+/* セクション区切り */
+.md-nav__item--nested {
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.md-nav__item--nested:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--nested {
+  border-top-color: rgba(255,255,255,0.06);
+}
+
+/* ===== スマホ対応 ===== */
+
+@media screen and (max-width: 76.25em) {
+  /* サイドバーのフォントサイズ調整 */
+  .md-nav {
+    font-size: 0.8rem;
+  }
+  .md-nav__link {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-typeset {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.3rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.1rem;
+  }
+
+  .md-typeset h3 {
+    font-size: 0.95rem;
+  }
+
+  /* テーブルをスクロール可能に */
+  .md-typeset table {
+    font-size: 0.7rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-typeset table th,
+  .md-typeset table td {
+    padding: 0.35rem 0.4rem;
+    white-space: nowrap;
+  }
+
+  /* コンテンツの左右パディングを詰める */
+  .md-content__inner {
+    padding: 0 0.6rem;
+  }
+
+  /* コードブロック */
+  .md-typeset pre {
+    font-size: 0.7rem;
+  }
+}

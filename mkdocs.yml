@@ -1,0 +1,80 @@
+site_name: 営業面談 Wiki
+site_description: まけどり営業チーム 面談記録・分析共有サイト
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  font:
+    text: Noto Sans JP
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.expand
+    - navigation.top
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
+  icon:
+    logo: material/briefcase
+  custom_dir: overrides
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: ja
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+nav:
+  - index.md
+  - サマリー:
+    - 営業サマリー: サマリー/営業サマリー.md
+  - 面談記録:
+    - 面談記録/index.md
+    - 01_川瀬達也: 面談記録/01_川瀬達也.md
+    - 02_長崎友志: 面談記録/02_長崎友志.md
+    - 03_けいすけ: 面談記録/03_けいすけ.md
+    - 04_朝田健慈: 面談記録/04_朝田健慈.md
+    - 05_れいや: 面談記録/05_れいや.md
+    - 06_ユウタ: 面談記録/06_ユウタ.md
+    - 07_むう: 面談記録/07_むう.md
+    - 08_鹿又敏幸: 面談記録/08_鹿又敏幸.md
+    - 09_高槻祐人: 面談記録/09_高槻祐人.md
+    - 10_小塚: 面談記録/10_小塚.md
+    - 11_小林: 面談記録/11_小林.md
+    - 12_影山景: 面談記録/12_影山景.md
+  - 分析:
+    - グダ要素分析: 分析/グダ要素分析.md
+    - ポスト戦略: 分析/ポスト戦略.md
