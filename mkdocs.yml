@@ -33,7 +33,6 @@ theme:
     - toc.follow
   icon:
     logo: material/briefcase
-  custom_dir: overrides
 
 extra_css:
   - stylesheets/extra.css
